@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .nav-bar {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav-bar ul {
+        display: flex;
+        gap: 50px;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .nav-bar button {
+        width: 130px;
+        height: 35px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    .left {
+        position: relative;
+    }
+
+    .img img {
+        width: 250px;
+        height: 250px;
+        margin-left: 200px;
+        margin-top: 200px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .img-2 img {
+        width: 250px;
+        height: 300px;
+        position: absolute;
+        top: 110px;
+        left: 150px;
+        z-index: 2;
+
+    }
+
+    .right img {
+        width: 40px;
+        height: auto;
+        top: -600px;
+        left: 400px;
+    }
+
+    .star {
+        position: relative;
+        height: auto;
+        top: -640px;
+        margin-left: 1100px;
+    }
+    .text{
+      margin-left: 500px;
+      margin-top: -650px;
+      /* border: 2px solid red; */
+      text-align: center;
+
+    }
+    .text h1{
+        font-size: 60px;
+        font-weight: bold;
+        font-family:'Times New Roman', Times, serif;
+        font-weight: 900;
+        font-style:initial;
+    }
+    .text p{
+        font-weight: 400;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    line-height: 1;
+    }
+    .star-2{
+        position: relative;
+        margin-left: 500px;
+        margin-top: 100px;
+    }
+    
+
+        
+    
+    .button-1{
+        margin-left: 700px;
+         margin-top: -100px;
+         
+          /* border:  .01px solid black; */
+        width: 102px;
+        height: auto;
+        background-color: black;
+         
+    }
+    .button-2{
+        
+        margin-left: 830px;
+        margin-top: -21.5px;
+        border-radius: 6px;
+        /* border:  .01px solid black; */
+        width: 71.5px;
+        height: auto;
+    }
+.button-2 button{
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contact{
+   margin-left: 750px;
+   margin-top: 40px;
+   
+}
+.contact a{
+    text-decoration: none;
+}
+.group{
+    display: flex;
+    margin-left: 700px;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+</style> 
+
+<body>
+    <div class="main">
+        <nav class="nav-bar">
+            <img src="./image/Logo.png" alt="logo">
+            <ul>
+                <li><a href=""></a>Home</li>
+                <li><a href=""></a>Male</li>
+                <li><a href=""></a>Female</li>
+                <li><a href=""></a>FAQ</li>
+                <li><a href=""></a>About</li>
+            </ul>
+            <button>search</button>
+        </nav>
+        <main>
+            <div class="left">
+                <div class="img">
+                    <img src="./image/squares.png" alt=" background ">
+                </div>
+                <div class="img-2">
+                    <img src="./image/Image.png" alt=" person">
+                </div>
+            </div>
+
+
+            <div class="right">
+                <div class="img">
+                    <img src="./image/globe.png " alt="globe">
+                </div>
+
+                <div class="star">
+                    <img src="./image/start.png" alt="star">
+
+                </div>
+                <div class="text">
+                    <h1>what's trend in 2025 ?</h1>
+                   <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor in-</p>
+                   <p>cididunt ut labore et dolore magna aliqua.ut enim ad minim veniam quis nostrud </p>
+                   <p>exercitation ullamco laboris nisi ut</p>
+
+                </div>
+                <div class="star-2">
+                    <img src="./image/start.png" alt="star"> 
+                </div>
+
+                <div class="main-button">
+                    <div class="button-1">
+                     <button>Email Address</button>
+                     </div>
+
+                     <div class="button-2">
+                     <button>Join Now</button>
+                     </div>
+                </div>
+                <div>
+                    <ul class="contact">
+                        <li> <a href="">contact us</a></li>
+                    </ul>
+                </div>
+                <div class="group">
+                    <img src="./image/Group (1).png" alt="messenger">
+                    <img src="./image/Group (2).png" alt="instagram">
+                    <img src="./image/Group (3).png" alt="whatsapp">
+                    <img src="./image/Group.png" alt="facebook">
+
+                </div>
+
+
+
+
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
