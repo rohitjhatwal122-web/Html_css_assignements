@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-1 {
+
+        display: flex;
+        background-image: url(./asstes/photo/mainBackground.png);
+        padding: 0px;
+        height: 600px;
+        width: 1250px;
+        /* border: 2px solid greenyellow; */
+    }
+
+    .nav-bar {
+        display: flex;
+        /* width: 100px;
+    height: 40px; */
+        position: relative;
+    }
+
+    .nav-bar img {
+        width: 100px;
+        height: 40px;
+        margin-left: 100px;
+        margin-top: 5px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .ull {
+        display: flex;
+        gap: 50px;
+        position: absolute;
+        z-index: 2;
+        margin-left: 750px;
+    }
+
+    .ull li a {
+        color: white;
+        text-transform: capitalize;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .ull li {
+        list-style: none;
+    }
+
+    .ull li a {
+        text-decoration: none;
+    }
+
+    .hero {
+        position: relative;
+        height: 600px;
+        background: url("your-image.jpg") center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+        width: 1250px;
+        z-index: 1;
+
+    }
+
+    .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero h1 {
+        position: relative;
+    }
+
+    .text-1 {
+        /* border: 2px solid black; */
+        text-transform: capitalize;
+        position: absolute;
+        z-index: 2;
+        width: 400px;
+        height: 200px;
+        color: white;
+        margin-top: 150px;
+        margin-left: 90px;
+    }
+
+    .text-1 h1 {
+        font-weight: 500;
+        font-size: 50px;
+    }
+
+    .button {
+        position: absolute;
+        z-index: 2;
+        margin-top: 400px;
+        margin-left: 100px;
+
+    }
+
+    .button button {
+        width: 90px;
+        height: 40px;
+        color: white;
+        background-color: royalblue;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: capitalize;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+
+
+    .main-2 {
+        display: flex;
+
+        padding: 0px;
+        height: 600px;
+        width: 1250px;
+        /* border: 2px solid greenyellow; */
+
+    }
+
+    .text-2 {
+        position: relative;
+        /* border: 2px solid black; */
+        width: 500px;
+        height: 150px;
+        font-size: 25px;
+        text-transform: capitalize;
+        font-weight: 600;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin-left: 400px;
+    }
+
+    .img-1 img {
+        position: absolute;
+        width: 250px;
+        height: 270px;
+        margin-top: 200px;
+        margin-left: -700px;
+        border-radius: 10px;
+    }
+
+    .img-2 img {
+        position: absolute;
+        width: 250px;
+        height: 270px;
+        margin-top: 230px;
+        margin-left: -380px;
+        border-radius: 10px;
+    }
+
+    .img-3 img {
+        position: absolute;
+        width: 250px;
+        height: 270px;
+        margin-top: 270px;
+        margin-left: -50px;
+        border-radius: 10px;
+    }
+
+    .text-3 {
+        /* border: 2px solid red; */
+        position: absolute;
+        width: 200px;
+        height: 80px;
+        border-radius: 15px;
+        line-height: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        color: royalblue;
+        margin-top: 430px;
+        margin-left: 230px;
+    }
+
+    .text-3 button {
+        position: absolute;
+        margin-top: -50px;
+        margin-left: 120px;
+        width: 70px;
+        height: 30px;
+        border-radius: 7px;
+        background-color: royalblue;
+        color: white;
+        cursor: pointer;
+    }
+
+    .text-4 {
+        /* border: 2px solid red; */
+        position: absolute;
+        width: 200px;
+        height: 80px;
+        border-radius: 15px;
+        line-height: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        color: royalblue;
+        margin-top: 460px;
+        margin-left: 550px;
+    }
+
+    .text-4 button {
+        position: absolute;
+        margin-top: -50px;
+        margin-left: 120px;
+        width: 70px;
+        height: 30px;
+        border-radius: 7px;
+        background-color: royalblue;
+        color: white;
+        cursor: pointer;
+    }
+
+
+    .text-5 {
+        /* border: 2px solid red; */
+        position: absolute;
+        width: 200px;
+        height: 80px;
+        border-radius: 15px;
+        line-height: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        color: royalblue;
+        margin-top: 500px;
+        margin-left: 880px;
+    }
+
+    .text-5 button {
+        position: absolute;
+        margin-top: -50px;
+        margin-left: 120px;
+        width: 70px;
+        height: 30px;
+        border-radius: 7px;
+        background-color: royalblue;
+        color: white;
+        cursor: pointer;
+    }
+
+
+    .main-3 {
+        display: flex;
+        position: relative;
+        padding: 0px;
+        height: 800px;
+        width: 1250px;
+        /* border: 2px solid greenyellow; */
+    }
+
+    .img-4 img {
+        position: absolute;
+        width: 250px;
+        height: 270px;
+        margin-top: 50px;
+        margin-left: 100px;
+        border-radius: 10px;
+    }
+
+    .img-5 img {
+        position: absolute;
+        width: 250px;
+        height: 270px;
+        margin-top: 50px;
+        margin-left: 500px;
+        border-radius: 10px;
+    }
+
+    .img-6 img {
+        position: absolute;
+        width: 250px;
+        height: 270px;
+        margin-top: 50px;
+        margin-left: 900px;
+        border-radius: 10px;
+    }
+
+    .img-7 img {
+        position: absolute;
+        width: 250px;
+        height: 270px;
+        margin-top: 450px;
+        margin-left: 100px;
+        border-radius: 10px;
+    }
+
+    .img-8 img {
+        position: absolute;
+        width: 250px;
+        height: 270px;
+        margin-top: 450px;
+        margin-left: 500px;
+        border-radius: 10px;
+    }
+
+    .img-9 img {
+        position: absolute;
+        width: 250px;
+        height: 270px;
+        margin-top: 450px;
+        margin-left: 900px;
+        border-radius: 10px;
+    }
+
+    .text-6 {
+        /* border: 2px solid red; */
+        position: absolute;
+        width: 200px;
+        height: 80px;
+        border-radius: 15px;
+        line-height: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        color: royalblue;
+        margin-top: 300px;
+        margin-left: 120px;
+    }
+
+    .text-6 button {
+        position: absolute;
+        margin-top: -50px;
+        margin-left: 120px;
+        width: 70px;
+        height: 30px;
+        border-radius: 7px;
+        background-color: royalblue;
+        color: white;
+        cursor: pointer;
+    }
+
+    .text-7 {
+        /* border: 2px solid red; */
+        position: absolute;
+        width: 200px;
+        height: 80px;
+        border-radius: 15px;
+        line-height: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        color: royalblue;
+        margin-top: 300px;
+        margin-left: 520px;
+    }
+
+    .text-7 button {
+        position: absolute;
+        margin-top: -50px;
+        margin-left: 120px;
+        width: 70px;
+        height: 30px;
+        border-radius: 7px;
+        background-color: royalblue;
+        color: white;
+        cursor: pointer;
+    }
+
+    .text-8 {
+        /* border: 2px solid red; */
+        position: absolute;
+        width: 200px;
+        height: 80px;
+        border-radius: 15px;
+        line-height: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        color: royalblue;
+        margin-top: 300px;
+        margin-left: 922px;
+    }
+
+    .text-8 button {
+        position: absolute;
+        margin-top: -50px;
+        margin-left: 120px;
+        width: 70px;
+        height: 30px;
+        border-radius: 7px;
+        background-color: royalblue;
+        color: white;
+        cursor: pointer;
+    }
+
+    .text-9 {
+        /* border: 2px solid red; */
+        position: absolute;
+        width: 200px;
+        height: 80px;
+        border-radius: 15px;
+        line-height: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        color: royalblue;
+        margin-top: 700px;
+        margin-left: 120px;
+    }
+
+    .text-9 button {
+        position: absolute;
+        margin-top: -50px;
+        margin-left: 120px;
+        width: 70px;
+        height: 30px;
+        border-radius: 7px;
+        background-color: royalblue;
+        color: white;
+        cursor: pointer;
+    }
+
+    .text-10 {
+        /* border: 2px solid red; */
+        position: absolute;
+        width: 200px;
+        height: 80px;
+        border-radius: 15px;
+        line-height: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        color: royalblue;
+        margin-top: 700px;
+        margin-left: 520px;
+    }
+
+    .text-10 button {
+        position: absolute;
+        margin-top: -50px;
+        margin-left: 120px;
+        width: 70px;
+        height: 30px;
+        border-radius: 7px;
+        background-color: royalblue;
+        color: white;
+        cursor: pointer;
+    }
+
+    .text-11 {
+        /* border: 2px solid red; */
+        position: absolute;
+        width: 200px;
+        height: 80px;
+        border-radius: 15px;
+        line-height: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        color: royalblue;
+        margin-top: 700px;
+        margin-left: 922px;
+    }
+
+    .text-11 button {
+        position: absolute;
+        margin-top: -50px;
+        margin-left: 120px;
+        width: 70px;
+        height: 30px;
+        border-radius: 7px;
+        background-color: royalblue;
+        color: white;
+        cursor: pointer;
+    }
+
+
+    .main-4 {
+        display: flex;
+        padding: 0px;
+        height: 600px;
+        width: 1250px;
+        /* border: 2px solid greenyellow; */
+        position: relative;
+    }
+
+    .img-10 img {
+        position: absolute;
+        width: 500px;
+        height: auto;
+        margin-top: 100px;
+    }
+
+    .img-11 img {
+        position: absolute;
+        width: 350px;
+        height: 380px;
+        border-radius: 10px;
+        margin-left: 90px;
+        margin-top: 50px;
+    }
+
+
+    .text-12 {
+        position: absolute;
+        /* border: 2px solid red; */
+        width: 500px;
+        height: 250px;
+        margin-left: 500px;
+        text-transform: capitalize;
+        margin-top: 150px;
+        margin-left: 600px;
+    }
+
+    .text-12 h1 {
+        font-size: 60px;
+
+    }
+
+    .text-12 button {
+        width: 150px;
+        height: 50px;
+        margin-left: 5px;
+        text-transform: capitalize;
+        border-radius: 10px;
+        background-color: royalblue;
+        color: white;
+    }
+
+
+    .main-5 {
+        display: flex;
+        padding: 0px;
+        height: 600px;
+        width: 1250px;
+        /* border: 2px solid greenyellow; */
+        position: relative;
+    }
+
+    .img-12 img {
+        position: absolute;
+        width: 500px;
+        height: auto;
+        margin-left: 745px;
+        margin-top: 90px;
+    }
+
+    .img-13 img {
+        position: absolute;
+        width: 360px;
+        height: 380px;
+        border-radius: 10px;
+        margin-left: 800px;
+        margin-top: 25px;
+    }
+
+    .text-13 {
+        position: absolute;
+        /* border: 2px solid red; */
+        width: 500px;
+        height: 250px;
+        margin-left: 500px;
+        text-transform: capitalize;
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+
+    .text-13 h1 {
+        font-size: 60px;
+
+    }
+
+    .text-13 button {
+        width: 150px;
+        height: 50px;
+        margin-left: 5px;
+        text-transform: capitalize;
+        border-radius: 10px;
+        background-color: royalblue;
+        color: white;
+    }
+
+    .main-6 {
+        display: flex;
+        padding: 0px;
+        height: 600px;
+        width: 1250px;
+        /* border: 2px solid greenyellow; */
+        position: relative;
+    }
+
+    .box {
+        position: relative;
+        /* border: 2px solid red; */
+        width: 700px;
+        height: 300px;
+        margin-left: 250px;
+        border-radius: 20px;
+        background-color: royalblue;
+    }
+
+    .txt-1 {
+        position: absolute;
+        /* border: 2px solid black; */
+        width: 500px;
+        height: 170px;
+        margin-left: 350px;
+        color: white;
+    }
+
+    .txt-1 h1 {
+        text-transform: capitalize;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .txt-1 button {
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        border-radius: 30px;
+        margin-top: 35px;
+        margin-left: 400px;
+    }
+
+    .txt-1 input {
+        position: absolute;
+        width: 300px;
+        height: 30px;
+        border-radius: 20px;
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+
+    .logo-2 img {
+        position: absolute;
+        width: 130px;
+        height: 40px;
+        margin-top: 400px;
+        margin-left: -800px;
+    }
+    .imgg{
+        position: absolute;
+        margin-top: 450px;
+        margin-left: 150px;
+        gap: 50px;
+    }
+    .imgg img{
+        
+        width: 50px;
+    }
+.txt-2{
+    position: absolute;
+    /* border: 2px solid black; */
+    width: 300px;
+    height: 60px;
+    margin-top: 500px;
+    margin-left: 150px;
+}
+.txt-3{
+    position: absolute;
+    display: flex;
+    gap: 40px;
+    margin-left: 600px;
+    margin-top: 350px;
+
+}
+.txt-4{
+    position: absolute;
+    display: flex;
+    gap: 110px;
+    margin-left: 600px;
+    margin-top: 400px;
+
+}.txt-5{
+    position: absolute;
+    display: flex;
+    gap: 140px;
+    margin-left: 600px;
+    margin-top: 450px;
+
+}.txt-6{
+    position: absolute;
+    display: flex;
+    gap: 130px;
+    margin-left: 600px;
+    margin-top: 500px;
+
+}.txt-7{
+    position: absolute;
+    display: flex;
+    gap: 130px;
+    margin-left: 600px;
+    margin-top: 550px;
+
+}
+
+</style>
+
+<body>
+
+    <div class="main">
+        <div class="main-1">
+            <nav class="nav-bar">
+                <img src="./asstes/icone/Logo.svg" alt="logo">
+                <ul class="ull">
+                    <li><a href="">location</a></li>
+                    <li><a href="">blogs</a></li>
+                    <li><a href="">testimonials</a></li>
+                    <li><a href="">contact</a></li>
+                </ul>
+            </nav>
+            <div class="hero">
+                <h1></h1>
+            </div>
+
+
+            <div class="text-1">
+                <h1>home that makes <br> you living life!</h1>
+                <p>are you looking for amazing real estate? don't <br>worry! we got it for you!</p>
+
+            </div>
+            <div class="button">
+                <button>learn more</button>
+            </div>
+
+        </div>
+
+
+        <div class="main-2">
+            <div class="text-2">
+                <h1>our best estate <br>are modern!</h1>
+            </div>
+
+            <div class="img-1">
+                <img src="./asstes/photo/cardImage1.png" alt="house">
+            </div>
+            <div class="img-2">
+                <img src="./asstes/photo/cardImage2.png" alt="house">
+            </div>
+            <div class="img-3">
+                <img src="./asstes/photo/cardImage3.png" alt="house">
+            </div>
+
+            <div class="text-3">
+                <h3>mixtownia</h3>
+                <p>$205,500</p>
+                <button>detail</button>
+            </div>
+
+            <div class="text-4">
+                <h3>mirtawan</h3>
+                <p>$102,200</p>
+                <button>detail</button>
+            </div>
+
+            <div class="text-5">
+                <h3>wartawan</h3>
+                <p>$135,900</p>
+                <button>detail</button>
+            </div>
+        </div>
+
+        <div class="main-3">
+            <div class="img-4">
+                <img src="./asstes/photo/cardImage4.png" alt="house">
+            </div>
+            <div class="img-5">
+                <img src="./asstes/photo/cardImage5.png" alt="house">
+            </div>
+            <div class="img-6">
+                <img src="./asstes/photo/cardImage6.png" alt="house">
+            </div>
+            <div class="img-7">
+                <img src="./asstes/photo/cardImage7.png" alt="house">
+            </div>
+            <div class="img-8">
+                <img src="./asstes/photo/cardImage8.png" alt="house">
+            </div>
+            <div class="img-9">
+                <img src="./asstes/photo/cardImage9.png" alt="house">
+            </div>
+
+            <div class="text-6">
+                <h3>mixtownia</h3>
+                <p>$205,500</p>
+                <button>detail</button>
+
+            </div>
+            <div class="text-7">
+                <h3>mirtawan</h3>
+                <p>$102,200</p>
+                <button>detail</button>
+
+            </div>
+            <div class="text-8">
+                <h3>wartawan</h3>
+                <p>$135,900</p>
+                <button>detail</button>
+
+            </div>
+            <div class="text-9">
+                <h3>mixtownia</h3>
+                <p>$205,500</p>
+                <button>detail</button>
+
+            </div>
+            <div class="text-10">
+                <h3>mirtawan</h3>
+                <p>$102,200</p>
+                <button>detail</button>
+
+            </div>
+            <div class="text-11">
+                <h3>wartawan</h3>
+                <p>$135,900</p>
+                <button>detail</button>
+            </div>
+        </div>
+
+        <div class="main-4">
+            <div class="img-10">
+                <img src="./asstes/icone/featureImageBg1.svg" alt="featureImageBg1">
+
+            </div>
+            <div class="img-11">
+                <img src="./asstes/photo/featuresImage1.png" alt="featuresImage1">
+            </div>
+
+            <div class="text-12">
+                <h1>modern, trendy, <br>affordable!</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>sed do eiusmod tempor incididunt ut
+                    labore</p>
+
+                <button>early bird book</button>
+            </div>
+        </div>
+
+        <div class="main-5">
+            <div class="img-12">
+                <img src="./asstes/icone/featureImageBg2.png" alt="featureImageBg2">
+            </div>
+            <div class="img-13">
+                <img src="./asstes/photo/featuresImage2.png" alt="featureImageBg2">
+
+            </div>
+            <div class="text-13">
+                <h1>unique house <br>for long trem!</h1>
+                <p>lorem ipsum dolodr sit amet, consectetur adipiscing elit, <br>sed do eiusmod tempor incididunt ut
+                    labore.</p>
+                <button>early bird book </button>
+
+            </div>
+        </div>
+
+        <div class="main-6">
+            <div class="box">
+            </div>
+            <div class="txt-1">
+                <h1>subscribe to our newsletter <br>for weekly article update.</h1>
+                <p>we have real estate-related blog so we can share our thought and rutinity in <br>our blog that update
+                    weekly. we will not spam you. we promise.
+                </p>
+                <button>subscribe</button>
+                <!-- <img src="./asstes/icone/mail.png" alt="mail"> -->
+                <input type="email" placeholder="enter your email-addres">
+
+            </div>
+
+            <div class="logo-2">
+                <img src="./asstes/icone/Logo.svg" alt="logo">
+            </div>
+            <div class="imgg">
+                <img src="./asstes/icone/facebook.png" alt="facebook">
+                <img src="./asstes/icone/twitter.png" alt="twitter">
+                <img src="./asstes/icone/instagram.png" alt="instagram">
+            </div>
+
+            <div class="txt-2">
+                <p>2022 award winning real estate <br> and lorem ipsum dolor sit amet</p>
+            </div>
+
+            <div class="txt-3">
+<h1>Location</h1>
+<h1>Contact</h1>
+<h1>Legals</h1>
+            </div>
+            <div class="txt-4">
+                <p>America</p>
+                <p>About me</p>
+                <p>Privacy</p>
+
+            </div>
+            <div class="txt-5">
+                <p>Asia</p>
+                <p>Teams</p>
+                <p>Disclaimer</p>
+
+            </div>
+            <div class="txt-6">
+                <p>Europe</p>
+                <p>Profile</p>
+                <p>Trems</p>
+
+            </div>
+            <div class="txt-7">
+                <p>Africa</p>
+                <p>FAQ</p>
+                <p>company</p>
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>
